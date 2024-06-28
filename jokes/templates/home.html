@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% for post in post_list %}
+<div class="post-entry">
+  <h2><a href="">{{ post.question }}</a></h2> <!-- new here!!! -->
+  <p>{{ post.answer }}</p>
+  <p>{{ post.created_at }}</p>
+  <p>{{ post.update_at }}</p>
+</div>
+{% endfor %}
+{% endblock content %}

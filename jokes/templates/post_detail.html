@@ -1,0 +1,14 @@
+{% extends "base.html" %} {% block content %}
+<div class="post-entry">
+  <h2>{{ post.question }}</h2>
+  <p>{{ post.answer }}</p>
+  <p>{{ post.created_at }}</p>
+  <p>{{ post.update_at }}</p>
+</div>
+<div>
+  <!-- start new HTML... -->
+  <p><a href="{% url 'post_edit' post.pk %}">+ Edit joke Post</a></p>
+  <p><a href="{% url 'post_delete' post.pk %}">+ Delete joke Post</a></p>
+</div>
+<!-- end new HTML... -->
+{% endblock content %}
